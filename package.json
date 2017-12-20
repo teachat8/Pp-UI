@@ -25,6 +25,7 @@
     "babel-runtime": "^5.8.38",
     "css-loader": "^0.28.7",
     "express": "^4.16.2",
+    "style-loader": "^0.19.1",
     "vue": "^2.5.3",
     "vue-hot-reload-api": "^2.2.4",
     "vue-html-loader": "^1.2.4",

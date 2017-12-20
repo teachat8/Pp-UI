@@ -1,5 +1,6 @@
 <template>
 <div>
+    <h1 class="h1-title">JS Components</h1>
     <router-link to="toast" class="test-item">Toast</router-link>
     <router-link to="toast" class="test-item">Pull up</router-link>
     <router-link to="toast" class="test-item">Pull Down</router-link>
@@ -19,11 +20,31 @@ export default {
 }
 </script>
 
-<style>
-.test-item {
-    display: block;
+<style scoped>
+.h1-title {
+    font-size: 1.5rem;
+    text-align: center;
     line-height: 4rem;
+    font-weight: 400;
+}
+.test-item {
+    position: relative;
+    display: block;
+    line-height: 3rem;
     padding-left: 1rem;
     color: #333;
+}
+.test-item:after {
+    border: 2px solid #c8c8cd;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    content: " ";
+    top: 50%;
+    right: 20px;
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    -webkit-transform: translateY(-50%) rotate(45deg);
+    transform: translateY(-50%) rotate(45deg);
 }
 </style>
