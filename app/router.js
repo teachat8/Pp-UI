@@ -14,6 +14,11 @@ export default new Router({
             name: 'toast',
             component: resolve => require(['./pages/toast.vue'], resolve)
         },
+        {
+            path: '/indicator',
+            name: 'indicator',
+            component: resolve => require(['./pages/indicator.vue'], resolve)
+        },
     ]
 });
 

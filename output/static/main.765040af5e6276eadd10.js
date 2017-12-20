@@ -29,7 +29,7 @@
 /******/
 /******/ 	// objects to store loaded and loading chunks
 /******/ 	var installedChunks = {
-/******/ 		1: 0
+/******/ 		2: 0
 /******/ 	};
 /******/
 /******/ 	// The require function
@@ -86,7 +86,7 @@
 /******/ 		if (__webpack_require__.nc) {
 /******/ 			script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 		}
-/******/ 		script.src = __webpack_require__.p + "" + chunkId + "." + {"0":"661501484e1de49987e6"}[chunkId] + ".js";
+/******/ 		script.src = __webpack_require__.p + "" + chunkId + "." + {"0":"5ec7dd5c282ce587ddcf","1":"a087ac4c4bdd87d61e6e"}[chunkId] + ".js";
 /******/ 		var timeout = setTimeout(onScriptComplete, 120000);
 /******/ 		script.onerror = script.onload = onScriptComplete;
 /******/ 		function onScriptComplete() {
@@ -11732,7 +11732,11 @@ __WEBPACK_IMPORTED_MODULE_0_Vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vue_
     }, {
         path: '/toast',
         name: 'toast',
-        component: resolve => __webpack_require__.e/* require */(0).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(22)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe)
+        component: resolve => __webpack_require__.e/* require */(1).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(22)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe)
+    }, {
+        path: '/indicator',
+        name: 'indicator',
+        component: resolve => __webpack_require__.e/* require */(0).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(23)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe)
     }]
 }));
 
@@ -14514,9 +14518,11 @@ var render = function() {
         _vm._v("Toast")
       ]),
       _vm._v(" "),
-      _c("router-link", { staticClass: "test-item", attrs: { to: "toast" } }, [
-        _vm._v("Pull up")
-      ]),
+      _c(
+        "router-link",
+        { staticClass: "test-item", attrs: { to: "indicator" } },
+        [_vm._v("Indicator")]
+      ),
       _vm._v(" "),
       _c("router-link", { staticClass: "test-item", attrs: { to: "toast" } }, [
         _vm._v("Pull Down")
