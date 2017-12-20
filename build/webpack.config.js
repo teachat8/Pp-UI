@@ -35,6 +35,10 @@ module.exports = {
             {
                 test: /\.css$/,
                 loader: 'css-loader'
+            },
+            {
+                test: /\.png$/,
+                loader: 'url-loader'
             }
         ]
     },

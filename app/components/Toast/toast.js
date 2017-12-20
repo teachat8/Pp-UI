@@ -9,7 +9,7 @@ Toast.install = function(Vue) {
             // Toast位置
             position : 'middle',//top,middle,bottom
             // 持续时间
-            duration : 30000000,
+            duration : 3000,
             // Toast的样式名
             className : '',
             // icon图标的样式名
