@@ -7,7 +7,6 @@
     <router-link to="toast" class="test-item">Swipe</router-link>
     <router-link to="toast" class="test-item">Popup</router-link>
     <router-link to="toast" class="test-item">Lazy load</router-link>
-    
 </div>
 </template>
 
