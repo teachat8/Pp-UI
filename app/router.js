@@ -19,6 +19,11 @@ export default new Router({
             name: 'indicator',
             component: resolve => require(['./pages/indicator.vue'], resolve)
         },
+        {
+            path: '/upRefresh',
+            name: 'upRefresh',
+            component: resolve => require(['./pages/upRefresh.vue'], resolve)
+        },
     ]
 });
 

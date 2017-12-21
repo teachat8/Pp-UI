@@ -3,7 +3,7 @@
     <h1 class="h1-title">JS Components</h1>
     <router-link to="toast" class="test-item">Toast</router-link>
     <router-link to="indicator" class="test-item">Indicator</router-link>
-    <router-link to="toast" class="test-item">Pull Down</router-link>
+    <router-link to="upRefresh" class="test-item">upRefresh</router-link>
     <router-link to="toast" class="test-item">Message box</router-link>
     <router-link to="toast" class="test-item">Swipe</router-link>
     <router-link to="toast" class="test-item">Popup</router-link>
