@@ -1,7 +1,7 @@
 <template>
 <div>
-    <div>6666</div>
-	<pp-refresh :top-method="loadTop">
+    <div class="top-box">在列表顶端, 按住 - 下拉 - 释放可以获取更多数据</div>
+	<pp-refresh :top-method="loadTop" ref="loadmore">
         <ul>
             <li v-for="(item, index) in list" v-html="item" :key="index" class="list-item"></li>
         </ul>
@@ -26,10 +26,12 @@ export default {
         loadTop() {
             var first = this.list[0],
                 arr = [];
-            for ( let i = 0 ; i<10; i++ ) {
-                this.list.unshift(--first);
-            }
-            return true;
+            setTimeout( () => {
+                for ( let i = 0 ; i<10; i++ ) {
+                    this.list.unshift(--first);
+                }
+                this.$refs.loadmore.endTopMethod();
+            }, 1000);
         }
     },
     components : {
@@ -39,6 +41,11 @@ export default {
 </script>
 
 <style>
+.top-box {
+    height: 5rem;
+    padding-top: 2rem;
+    text-align: center;
+}
 .list-item {
     height: 50px;
     line-height: 50px;
