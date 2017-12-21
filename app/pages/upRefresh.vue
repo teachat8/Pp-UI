@@ -1,11 +1,13 @@
 <template>
 <div>
     <div class="top-box">在列表顶端, 按住 - 下拉 - 释放可以获取更多数据</div>
-	<pp-refresh :top-method="loadTop" ref="loadmore">
-        <ul>
-            <li v-for="(item, index) in list" v-html="item" :key="index" class="list-item"></li>
-        </ul>
-    </pp-refresh>
+    <div class="test-refresh-box">
+        <pp-refresh :top-method="loadTop" ref="loadmore">
+            <ul>
+                <li v-for="(item, index) in list" v-html="item" :key="index" class="list-item"></li>
+            </ul>
+        </pp-refresh>
+    </div>
 </div>
 </template>
 
@@ -41,6 +43,10 @@ export default {
 </script>
 
 <style>
+.test-refresh-box {
+    height: 400px;
+    overflow: scroll;
+}
 .top-box {
     height: 5rem;
     padding-top: 2rem;

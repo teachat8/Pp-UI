@@ -112,6 +112,8 @@ exports.default = {
 //
 //
 //
+//
+//
 
 /***/ }),
 
@@ -197,6 +199,9 @@ exports.default = {
             var target = event.targetTouches[0];
             this.moveY = target.pageY;
             var y = this.moveY - this.startY;
+            if (y < 0) {
+                return;
+            }
             // 如果下拉距离大于下拉距离阈值
             if (y > this.topDistance) {
                 this.topStatus = true;
@@ -276,7 +281,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "\n.top-box {\r\n    height: 5rem;\r\n    padding-top: 2rem;\r\n    text-align: center;\n}\n.list-item {\r\n    height: 50px;\r\n    line-height: 50px;\r\n    text-align: center;\r\n    border-bottom: 1px solid #dedede;\n}\r\n", ""]);
+exports.push([module.i, "\n.test-refresh-box {\r\n    height: 400px;\r\n    overflow: scroll;\n}\n.top-box {\r\n    height: 5rem;\r\n    padding-top: 2rem;\r\n    text-align: center;\n}\n.list-item {\r\n    height: 50px;\r\n    line-height: 50px;\r\n    text-align: center;\r\n    border-bottom: 1px solid #dedede;\n}\r\n", ""]);
 
 // exports
 
@@ -377,7 +382,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "\n.pp-refresh-box[data-v-3d5d6f67] {\r\n    overflow: hidden;\n}\n.pp-refresh-content[data-v-3d5d6f67] {\r\n    /*-webkit-transition: -webkit-transform 300ms;*/\n}\n.pp-refresh-top[data-v-3d5d6f67] {\r\n    margin-top: -50px;\r\n    text-align: center;\r\n    height: 50px;\r\n    line-height: 50px;\n}\n.pp-loading[data-v-3d5d6f67] {\r\n    display: block;\r\n    width: 2rem;\r\n    height: 2rem;\r\n    margin: 0 auto;\r\n    background: url(" + __webpack_require__(48) + ") no-repeat center / 2rem 2rem;\r\n     -webkit-animation: loading-data-v-3d5d6f67 .5s infinite;\n}\n@-webkit-keyframes loading-data-v-3d5d6f67 {\n0% {\r\n        -webkit-transform: rotate(0deg)\n}\n25% {\r\n        -webkit-transform: rotate(90deg)\n}\n50% {\r\n        -webkit-transform: rotate(180deg)\n}\n75% {\r\n        -webkit-transform: rotate(270deg)\n}\n100% {\r\n        -webkit-transform: rotate(360deg)\n}\n}\n.up[data-v-3d5d6f67] {\r\n    -webkit-transition: -webkit-transform .2s;\r\n    -webkit-transform: rotate(180deg);\n}\r\n", ""]);
+exports.push([module.i, "\n.pp-refresh-box[data-v-3d5d6f67] {\r\n    overflow: hidden;\n}\n.pp-refresh-box .pp-refresh-top[data-v-3d5d6f67] {\r\n    margin-top: -50px;\r\n    text-align: center;\r\n    height: 50px;\r\n    line-height: 50px;\n}\n.pp-refresh-box .pp-loading[data-v-3d5d6f67] {\r\n    display: block;\r\n    width: 2rem;\r\n    height: 2rem;\r\n    margin: 0 auto;\r\n    background: url(" + __webpack_require__(48) + ") no-repeat center / 2rem 2rem;\r\n     -webkit-animation: loading-data-v-3d5d6f67 .5s infinite;\n}\n@-webkit-keyframes loading-data-v-3d5d6f67 {\n0% {\r\n        -webkit-transform: rotate(0deg)\n}\n25% {\r\n        -webkit-transform: rotate(90deg)\n}\n50% {\r\n        -webkit-transform: rotate(180deg)\n}\n75% {\r\n        -webkit-transform: rotate(270deg)\n}\n100% {\r\n        -webkit-transform: rotate(360deg)\n}\n}\n.pp-refresh-box .up[data-v-3d5d6f67] {\r\n    -webkit-transition: -webkit-transform .2s;\r\n    -webkit-transform: rotate(180deg);\n}\r\n", ""]);
 
 // exports
 
@@ -437,32 +442,35 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c("div", { staticClass: "top-box" }, [
-        _vm._v("在列表顶端, 按住 - 下拉 - 释放可以获取更多数据")
-      ]),
-      _vm._v(" "),
-      _c(
-        "pp-refresh",
-        { ref: "loadmore", attrs: { "top-method": _vm.loadTop } },
-        [
-          _c(
-            "ul",
-            _vm._l(_vm.list, function(item, index) {
-              return _c("li", {
-                key: index,
-                staticClass: "list-item",
-                domProps: { innerHTML: _vm._s(item) }
+  return _c("div", [
+    _c("div", { staticClass: "top-box" }, [
+      _vm._v("在列表顶端, 按住 - 下拉 - 释放可以获取更多数据")
+    ]),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "test-refresh-box" },
+      [
+        _c(
+          "pp-refresh",
+          { ref: "loadmore", attrs: { "top-method": _vm.loadTop } },
+          [
+            _c(
+              "ul",
+              _vm._l(_vm.list, function(item, index) {
+                return _c("li", {
+                  key: index,
+                  staticClass: "list-item",
+                  domProps: { innerHTML: _vm._s(item) }
+                })
               })
-            })
-          )
-        ]
-      )
-    ],
-    1
-  )
+            )
+          ]
+        )
+      ],
+      1
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true

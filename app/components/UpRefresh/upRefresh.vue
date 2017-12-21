@@ -73,6 +73,9 @@ export default {
             let target = event.targetTouches[0];           
             this.moveY = target.pageY;
             var y = this.moveY - this.startY;
+            if ( y<0 ) {
+                return;
+            }
             // 如果下拉距离大于下拉距离阈值
             if ( y > this.topDistance ) {
                 this.topStatus = true;
@@ -117,16 +120,13 @@ export default {
 .pp-refresh-box {
     overflow: hidden;
 }
-.pp-refresh-content {
-    /*-webkit-transition: -webkit-transform 300ms;*/
-}
-.pp-refresh-top {
+.pp-refresh-box .pp-refresh-top {
     margin-top: -50px;
     text-align: center;
     height: 50px;
     line-height: 50px;
 }
-.pp-loading {
+.pp-refresh-box .pp-loading {
     display: block;
     width: 2rem;
     height: 2rem;
@@ -151,7 +151,7 @@ export default {
         -webkit-transform: rotate(360deg)            
     }
 }
-.up {
+.pp-refresh-box .up {
     -webkit-transition: -webkit-transform .2s;
     -webkit-transform: rotate(180deg);
 }
