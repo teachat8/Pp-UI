@@ -32,6 +32,7 @@ export default {
                 for ( let i = 0 ; i<10; i++ ) {
                     this.list.unshift(--first);
                 }
+                // 必须手动调用组件内部的方法
                 this.$refs.loadmore.endTopMethod();
             }, 1000);
         }
@@ -46,6 +47,7 @@ export default {
 .test-refresh-box {
     height: 400px;
     overflow: scroll;
+    -webkit-overflow-scrolling : touch;  
 }
 .top-box {
     height: 5rem;
