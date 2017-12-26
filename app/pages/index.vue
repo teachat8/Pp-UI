@@ -4,10 +4,7 @@
     <router-link to="toast" class="test-item">Toast</router-link>
     <router-link to="indicator" class="test-item">Indicator</router-link>
     <router-link to="upRefresh" class="test-item">upRefresh</router-link>
-    <router-link to="toast" class="test-item">Message box</router-link>
-    <router-link to="toast" class="test-item">Swipe</router-link>
-    <router-link to="toast" class="test-item">Popup</router-link>
-    <router-link to="toast" class="test-item">Lazy load</router-link>
+    <router-link to="infiniteScroll" class="test-item">infiniteScroll</router-link>
 </div>
 </template>
 

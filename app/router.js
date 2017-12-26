@@ -24,6 +24,11 @@ export default new Router({
             name: 'upRefresh',
             component: resolve => require(['./pages/upRefresh.vue'], resolve)
         },
+        {
+            path: '/infiniteScroll',
+            name: 'infiniteScroll',
+            component: resolve => require(['./pages/infiniteScroll.vue'], resolve)
+        },
     ]
 });
 
