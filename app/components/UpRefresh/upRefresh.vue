@@ -1,6 +1,6 @@
 <template>
 <div class="pp-refresh-box">
-	<div class="pp-refresh-content" id="ppRefresh">
+	<div class="pp-refresh-content"  ref="load">
         <div class="pp-refresh-top">
             <span v-if="isShowLoading" class="pp-loading"></span>
             <div v-else :class="{up:topStatus}">↓</div>
@@ -55,7 +55,7 @@ export default {
 
     methods : {
         init() {
-            this.moveDom = document.getElementById('ppRefresh');
+            this.moveDom = this.$refs.load;
             this.moveDom.style.webkitTransform = 'translate3d(0px,0px,0px)';
             // $el Vue 实例使用的根 DOM 元素
             this.moveDom.addEventListener('touchstart', this.handleTouchStart);
@@ -76,9 +76,15 @@ export default {
             if ( y<0 ) {
                 return;
             }
+            // 判断用户有想下拉刷新的意图
+            if ( this.getTranslate3d() > 0 )  {
+                event.preventDefault();
+            }
             // 如果下拉距离大于下拉距离阈值
             if ( y > this.topDistance ) {
                 this.topStatus = true;
+            } else {
+                this.topStatus = false;
             }
             if ( y > this.maxDistance ) {
                 y = this.maxDistance;
