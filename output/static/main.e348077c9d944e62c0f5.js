@@ -29,7 +29,7 @@
 /******/
 /******/ 	// objects to store loaded and loading chunks
 /******/ 	var installedChunks = {
-/******/ 		3: 0
+/******/ 		4: 0
 /******/ 	};
 /******/
 /******/ 	// The require function
@@ -86,7 +86,7 @@
 /******/ 		if (__webpack_require__.nc) {
 /******/ 			script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 		}
-/******/ 		script.src = __webpack_require__.p + "" + chunkId + "." + {"0":"5a0066fe0cdc828f1ef2","1":"b9f6459780f2b085fdb7","2":"83e2c3d4f15e5ac398fc"}[chunkId] + ".js";
+/******/ 		script.src = __webpack_require__.p + "" + chunkId + "." + {"0":"72211c2e5d36c9b1bf47","1":"94c03188a4edb66136ce","2":"716ea2d52cc9130b63a3","3":"e870131344732f7aebd2"}[chunkId] + ".js";
 /******/ 		var timeout = setTimeout(onScriptComplete, 120000);
 /******/ 		script.onerror = script.onload = onScriptComplete;
 /******/ 		function onScriptComplete() {
@@ -11407,9 +11407,6 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
-//
-//
-//
 
 exports.default = {
     name: 'index',
@@ -11761,19 +11758,25 @@ exports.default = new _vueRouter2.default({
         path: '/toast',
         name: 'toast',
         component: function component(resolve) {
-            return __webpack_require__.e/* require */(2).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(22)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+            return __webpack_require__.e/* require */(3).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(22)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
         }
     }, {
         path: '/indicator',
         name: 'indicator',
         component: function component(resolve) {
-            return __webpack_require__.e/* require */(1).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(23)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+            return __webpack_require__.e/* require */(2).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(23)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
         }
     }, {
         path: '/upRefresh',
         name: 'upRefresh',
         component: function component(resolve) {
-            return __webpack_require__.e/* require */(0).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(24)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+            return __webpack_require__.e/* require */(1).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(24)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+        }
+    }, {
+        path: '/infiniteScroll',
+        name: 'infiniteScroll',
+        component: function component(resolve) {
+            return __webpack_require__.e/* require */(0).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(25)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
         }
     }]
 });
@@ -14571,21 +14574,11 @@ var render = function() {
         [_vm._v("upRefresh")]
       ),
       _vm._v(" "),
-      _c("router-link", { staticClass: "test-item", attrs: { to: "toast" } }, [
-        _vm._v("Message box")
-      ]),
-      _vm._v(" "),
-      _c("router-link", { staticClass: "test-item", attrs: { to: "toast" } }, [
-        _vm._v("Swipe")
-      ]),
-      _vm._v(" "),
-      _c("router-link", { staticClass: "test-item", attrs: { to: "toast" } }, [
-        _vm._v("Popup")
-      ]),
-      _vm._v(" "),
-      _c("router-link", { staticClass: "test-item", attrs: { to: "toast" } }, [
-        _vm._v("Lazy load")
-      ])
+      _c(
+        "router-link",
+        { staticClass: "test-item", attrs: { to: "infiniteScroll" } },
+        [_vm._v("infiniteScroll")]
+      )
     ],
     1
   )
