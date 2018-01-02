@@ -1,6 +1,6 @@
 let Toast = {};
 Toast.install = function(Vue) {
-    // 这是不是和写jq插件很像。。。
+    // 添加实例方法，调用的时候就是this.$toast();
     Vue.prototype.$toast = (options) => {
 
         let opt = {
