@@ -24,7 +24,7 @@ Toast.install = function(Vue) {
 
         let toastTpl = Vue.extend({
             template : `<div class="pop-box">
-                            <div class="pop-msg ${opt.className} position-${opt.position}">
+                            <div class="pop-msg ${opt.className} position-${opt.position}" id="popMsg">
                                 <div class="${opt.iconClass}"></div>
                                 <div>${opt.message}</div>
                             </div>
@@ -33,7 +33,10 @@ Toast.install = function(Vue) {
         let tpl = new toastTpl().$mount().$el;
         document.body.appendChild(tpl);
         setTimeout( () => {
-            document.body.removeChild(tpl);
+            document.querySelector('#popMsg').className += ' pop-out';
+            setTimeout( () => {
+                document.body.removeChild(tpl);
+            }, 500);
         }, opt.duration);
         
     };

@@ -18,7 +18,7 @@ Indicator.install = function(Vue) {
 
         let indicatorTpl = Vue.extend({
             template : `<div class="pop-box">
-                            <div class="pop-msg">
+                            <div class="pop-msg" id="popMsg">
                                 <div class="${opt.spinnerType}"></div>
                                 <div class="loading-text">${opt.text}</div>
                             </div>
@@ -29,8 +29,11 @@ Indicator.install = function(Vue) {
         document.body.appendChild(tpl);
 
         Vue.prototype.$indicator.close = () => {
-            document.body.removeChild(tpl);            
-        }
+            document.querySelector('#popMsg').className += ' pop-out';
+                setTimeout( () => {
+                    document.body.removeChild(tpl);
+                }, 500);         
+            }
     };
 };
 

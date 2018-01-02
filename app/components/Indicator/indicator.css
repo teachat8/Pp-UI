@@ -23,15 +23,23 @@
     word-break: break-all;
     -webkit-animation: fade-in .5s;
 }
+.pop-box .pop-out {
+    -webkit-animation: fade-out .5s;    
+}
 @-webkit-keyframes fade-in {
     0% {
         opacity:0;
     }
-    50% {
-        opacity:.5;
-    }
     100% {
         opacity:1;        
+    }
+}
+@-webkit-keyframes fade-out {
+    0% {
+        opacity:1;
+    }
+    100% {
+        opacity:0;        
     }
 }
 .snake,
