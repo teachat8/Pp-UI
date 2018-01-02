@@ -17,7 +17,7 @@ Toast.install = function(Vue) {
         };
 
         for ( let x in options ) {
-            if ( options[x] ) {
+            if ( options[x] !== '' ) {
                 opt[x] = options[x];
             }
         }

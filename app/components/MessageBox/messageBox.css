@@ -1,0 +1,85 @@
+.pp-box  {
+    
+}
+.pp-box .pp-bg {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: rgba(0, 0, 0, .5);
+
+}
+.pp-box .pp-message {
+    position: absolute;
+    z-index: 1001;
+    left: 50%;
+    top: 50%;     
+    transform: translateX(-50%) translateY(-50%);        
+    width: 85%;
+    background: #fff;
+    color: #fff;
+    border-radius: 2px;
+    font-size: 14px;
+    word-break: break-all;
+    -webkit-animation: fade-in .1s;
+    font-size: 16px;
+}
+.pp-box .pp-out {
+    -webkit-animation: fade-out .1s;
+}
+@-webkit-keyframes fade-in {
+    0% {
+        -webkit-transform: translateX(-50%) translateY(-50%) scale(0, 0); 
+    }
+    100% {
+        -webkit-transform: translateX(-50%) translateY(-50%) scale(1, 1);     
+    }
+}
+@-webkit-keyframes fade-out {
+    0% {
+        -webkit-transform: translateX(-50%) translateY(-50%) scale(1, 1);             
+    }
+    100% {
+        -webkit-transform: translateX(-50%) translateY(-50%) scale(0, 0);                   
+    }
+}
+.pp-box .pp-title {
+    padding-top: 15px;
+    text-align: center;
+    padding-left: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+}
+.pp-box .pp-content {
+    padding: 10px 20px 15px;
+    border-bottom: 1px solid #ddd;
+    min-height: 36px;
+    position: relative;
+    color: #999;
+    text-align: center;
+    line-height: 36px;
+}
+.pp-box .pp-btns {
+    display: -webkit-box;
+    display: flex;
+    height: 40px;
+    line-height: 40px;
+}
+.pp-box .cancel-btn,
+.pp-box .sure-btn {
+    line-height: 35px;
+    background-color: #fff;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+.pp-box .cancel-btn {
+    border-right: 1px solid #ddd;
+}
+.pp-box .sure-btn {
+    color: #26a2ff;
+}

@@ -4,11 +4,12 @@
     <router-link to="toast" class="test-item">Toast</router-link>
     <router-link to="indicator" class="test-item">Indicator</router-link>
     <router-link to="upRefresh" class="test-item">upRefresh</router-link>
-    <router-link to="infiniteScroll" class="test-item">infiniteScroll</router-link>
+    <router-link to="messageBox" class="test-item">messageBox</router-link>    
 </div>
 </template>
 
 <script>
+import Vue from 'Vue'
 export default {
 	name:'index',
     data() {

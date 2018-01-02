@@ -29,6 +29,11 @@ export default new Router({
             name: 'infiniteScroll',
             component: resolve => require(['./pages/infiniteScroll.vue'], resolve)
         },
+         {
+            path: '/messageBox',
+            name: 'messageBox',
+            component: resolve => require(['./pages/messageBox.vue'], resolve)
+        },
     ]
 });
 
