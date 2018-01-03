@@ -4,7 +4,8 @@
     <router-link to="toast" class="test-item">Toast</router-link>
     <router-link to="indicator" class="test-item">Indicator</router-link>
     <router-link to="upRefresh" class="test-item">upRefresh</router-link>
-    <router-link to="messageBox" class="test-item">messageBox</router-link>    
+    <router-link to="messageBox" class="test-item">messageBox</router-link>
+    <router-link to="swiper" class="test-item">swiper</router-link>    
 </div>
 </template>
 
