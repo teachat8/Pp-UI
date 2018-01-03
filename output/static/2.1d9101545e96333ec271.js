@@ -248,7 +248,7 @@ Indicator.install = function (Vue) {
             document.querySelector('#popMsg').className += ' pop-out';
             setTimeout(function () {
                 document.body.removeChild(tpl);
-            }, 500);
+            }, 300);
         };
     };
 };

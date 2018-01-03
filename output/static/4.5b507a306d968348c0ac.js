@@ -168,7 +168,7 @@ exports = module.exports = __webpack_require__(1)(undefined);
 
 
 // module
-exports.push([module.i, ".pop-box  {\r\n    position: fixed;\r\n    z-index: 1000;\r\n    left: 0;\r\n    right: 0;\r\n    bottom: 0;\r\n    top: 0;\r\n    -webkit-tap-highlight-color: rgba(0,0,0,0);\r\n    -webkit-tap-highlight-color: transparent;\r\n}\r\n.pop-box .pop-msg {\r\n    position: absolute;\r\n    left: 50%;\r\n    -webkit-transform: translateX(-50%) translateY(-50%);            \r\n    transform: translateX(-50%) translateY(-50%);        \r\n    max-width: 80%;\r\n    padding: .3rem .8rem;\r\n    background: rgba(0, 0, 0, .8);\r\n    color: #fff;\r\n    border-radius: .3rem;\r\n    font-size: 14px;\r\n    word-break: break-all;\r\n    -webkit-animation: fade-in .5s;\r\n}\r\n.pop-box .pop-out {\r\n    -webkit-animation: fade-out .5s;\r\n}\r\n.pop-box .position-middle {\r\n    top: 50%;\r\n}\r\n.pop-box .position-top {\r\n    top:5%;\r\n}\r\n.pop-box .position-bottom {\r\n    bottom:5%;\r\n}\r\n@-webkit-keyframes fade-in {\r\n    0% {\r\n        opacity:0;\r\n    }\r\n    100% {\r\n        opacity:1;        \r\n    }\r\n}\r\n@-webkit-keyframes fade-out {\r\n    0% {\r\n        opacity:1;\r\n    }\r\n    100% {\r\n        opacity:0;        \r\n    }\r\n}", ""]);
+exports.push([module.i, ".pop-box  {\r\n    position: fixed;\r\n    z-index: 1000;\r\n    left: 0;\r\n    right: 0;\r\n    bottom: 0;\r\n    top: 0;\r\n}\r\n.pop-box .pop-msg {\r\n    position: absolute;\r\n    left: 50%;\r\n    -webkit-transform: translateX(-50%) translateY(-50%);            \r\n    transform: translateX(-50%) translateY(-50%);        \r\n    max-width: 80%;\r\n    padding: .3rem .8rem;\r\n    background: rgba(0, 0, 0, .8);\r\n    color: #fff;\r\n    border-radius: .3rem;\r\n    font-size: 14px;\r\n    word-break: break-all;\r\n    -webkit-animation: fade-in .5s;\r\n}\r\n.pop-box .pop-out {\r\n    -webkit-animation: fade-out .5s;\r\n}\r\n.pop-box .position-middle {\r\n    top: 50%;\r\n}\r\n.pop-box .position-top {\r\n    top:5%;\r\n}\r\n.pop-box .position-bottom {\r\n    bottom:5%;\r\n}\r\n@-webkit-keyframes fade-in {\r\n    0% {\r\n        opacity:0;\r\n    }\r\n    100% {\r\n        opacity:1;        \r\n    }\r\n}\r\n@-webkit-keyframes fade-out {\r\n    0% {\r\n        opacity:1;\r\n    }\r\n    100% {\r\n        opacity:0;        \r\n    }\r\n}", ""]);
 
 // exports
 
@@ -224,7 +224,7 @@ Toast.install = function (Vue) {
             document.querySelector('#popMsg').className += ' pop-out';
             setTimeout(function () {
                 document.body.removeChild(tpl);
-            }, 500);
+            }, 300);
         }, opt.duration);
     };
 };
