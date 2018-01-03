@@ -29,7 +29,7 @@
 /******/
 /******/ 	// objects to store loaded and loading chunks
 /******/ 	var installedChunks = {
-/******/ 		5: 0
+/******/ 		6: 0
 /******/ 	};
 /******/
 /******/ 	// The require function
@@ -86,7 +86,7 @@
 /******/ 		if (__webpack_require__.nc) {
 /******/ 			script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 		}
-/******/ 		script.src = __webpack_require__.p + "" + chunkId + "." + {"0":"f6af67bed5b9998049ab","1":"668938e11d41d977f387","2":"97422e748f51f2849864","3":"4095bec0e398eb3d6013","4":"a0c243c9deaf01e49257"}[chunkId] + ".js";
+/******/ 		script.src = __webpack_require__.p + "" + chunkId + "." + {"0":"a0e0bd7ebbf9ea17253b","1":"69751f3588db3636f612","2":"5ec96791b6b2df215792","3":"90fe24f3859cfa2d5e9d","4":"1d3a0d861974eeebb18b","5":"5bd81dbe1da2c0899d21"}[chunkId] + ".js";
 /******/ 		var timeout = setTimeout(onScriptComplete, 120000);
 /******/ 		script.onerror = script.onload = onScriptComplete;
 /******/ 		function onScriptComplete() {
@@ -11419,6 +11419,7 @@ exports.default = {
 //
 //
 //
+//
 
 /***/ }),
 /* 7 */
@@ -11763,7 +11764,7 @@ exports.default = new _vueRouter2.default({
         path: '/toast',
         name: 'toast',
         component: function component(resolve) {
-            return __webpack_require__.e/* require */(3).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(22)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+            return __webpack_require__.e/* require */(4).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(22)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
         }
     }, {
         path: '/indicator',
@@ -11787,7 +11788,13 @@ exports.default = new _vueRouter2.default({
         path: '/messageBox',
         name: 'messageBox',
         component: function component(resolve) {
-            return __webpack_require__.e/* require */(4).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(26)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+            return __webpack_require__.e/* require */(5).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(26)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+        }
+    }, {
+        path: '/swiper',
+        name: 'swiper',
+        component: function component(resolve) {
+            return __webpack_require__.e/* require */(3).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(27)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
         }
     }]
 });
@@ -14589,7 +14596,11 @@ var render = function() {
         "router-link",
         { staticClass: "test-item", attrs: { to: "messageBox" } },
         [_vm._v("messageBox")]
-      )
+      ),
+      _vm._v(" "),
+      _c("router-link", { staticClass: "test-item", attrs: { to: "swiper" } }, [
+        _vm._v("swiper")
+      ])
     ],
     1
   )

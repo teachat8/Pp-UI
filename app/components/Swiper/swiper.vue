@@ -5,15 +5,6 @@
     </div>
     <div class="pagination"></div>
 </div>
-
-<!--<div class="swiper-container" ref="swiperContainer">
-    <div class="swiper-wrapper" ref="swiperWrapper">
-        <div class="swiper-slide item1">1</div>
-        <div class="swiper-slide item2">2</div>
-        <div class="swiper-slide item3">3</div>
-    </div>
-    <div class="pagination"></div>
-</div>-->
 </template>
 
 <script>
@@ -251,7 +242,7 @@ export default {
 
             setTimeout( () => {
                 this.oneEnd = true;
-            }, 100);
+            }, 200);
         },
 
         // 自动轮播

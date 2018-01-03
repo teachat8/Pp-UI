@@ -1,18 +1,18 @@
-webpackJsonp([4],{
+webpackJsonp([5],{
 
 /***/ 26:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_bustCache_messageBox_vue__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_bustCache_messageBox_vue__ = __webpack_require__(35);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_bustCache_messageBox_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_bustCache_messageBox_vue__);
 /* harmony namespace reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_bustCache_messageBox_vue__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_bustCache_messageBox_vue__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_426bfcc5_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_bustCache_messageBox_vue__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_426bfcc5_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_bustCache_messageBox_vue__ = __webpack_require__(70);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(63)
+  __webpack_require__(66)
 }
 var normalizeComponent = __webpack_require__(3)
 /* script */
@@ -59,7 +59,7 @@ if (false) {(function () {
 
 /***/ }),
 
-/***/ 34:
+/***/ 35:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -73,7 +73,7 @@ var _Vue = __webpack_require__(0);
 
 var _Vue2 = _interopRequireDefault(_Vue);
 
-var _messageBox = __webpack_require__(66);
+var _messageBox = __webpack_require__(69);
 
 var _messageBox2 = _interopRequireDefault(_messageBox);
 
@@ -119,13 +119,13 @@ exports.default = {
 
 /***/ }),
 
-/***/ 63:
+/***/ 66:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(64);
+var content = __webpack_require__(67);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -146,12 +146,12 @@ if(false) {
 
 /***/ }),
 
-/***/ 64:
+/***/ 67:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(undefined);
 // imports
-exports.i(__webpack_require__(65), "");
+exports.i(__webpack_require__(68), "");
 
 // module
 exports.push([module.i, "\n.toast-box {\r\n    padding-top: 8rem;\n}\n.test-btn {\r\n    display: block;\r\n    margin: 2rem auto;\r\n    width: 90%;\r\n    line-height: 2rem;\r\n    text-align: center;\r\n    font-size: 1.2rem;\r\n    text-align: center;\r\n    color: #333;\r\n    border: 1px solid #d2d2d2;\r\n    border-radius: 3px;\n}\n.btn1 {\r\n    color: red;\n}\n.btn2 {\r\n    background: #878976;\r\n    color: #fff;\n}\r\n", ""]);
@@ -161,7 +161,7 @@ exports.push([module.i, "\n.toast-box {\r\n    padding-top: 8rem;\n}\n.test-btn 
 
 /***/ }),
 
-/***/ 65:
+/***/ 68:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(undefined);
@@ -176,7 +176,7 @@ exports.push([module.i, ".pp-box  {\r\n    \r\n}\r\n.pp-box .pp-bg {\r\n    posi
 
 /***/ }),
 
-/***/ 66:
+/***/ 69:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -261,7 +261,7 @@ exports.default = MessageBox;
 
 /***/ }),
 
-/***/ 67:
+/***/ 70:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
