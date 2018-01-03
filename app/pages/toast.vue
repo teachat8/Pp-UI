@@ -18,7 +18,7 @@ export default {
     methods : {
         test1() {
             this.$toast({
-                message : '提示信息',
+                message : '提示信息'
             });
         },
         test2() {
